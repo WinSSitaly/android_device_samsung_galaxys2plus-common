@@ -456,10 +456,10 @@ service geomagneticd /system/bin/geomagneticd
     user compass
     group system input
 
-service charger /sbin/healthd -c
+service charger /charger
     class charger
     critical
-    seclabel u:r:healthd:s0
+    seclabel u:r:charger:s0
 
 # begin of wifi
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
