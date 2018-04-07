@@ -37,6 +37,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libglgps-compat
 
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+
 # Audio modules
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -48,6 +52,69 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 USE_CUSTOM_AUDIO_POLICY := 1
+
+# Audio HAL
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.soundtrigger@2.0-impl
+
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+
+# Light HAL
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl
+
+# Power HAL
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl
+
+# graphics HIDL interfaces
+PRODUCT_PACKAGES += \
+android.hardware.graphics.bufferqueue@1.0_hal \
+android.hardware.configstore@1.0_hal \
+android.hardware.configstore@1.0-service \
+android.hardware.configstore-utils \
+android.hardware.graphics.allocator@2.0-impl \
+android.hardware.graphics.allocator@2.0-service \
+android.hardware.graphics.mapper@2.0-impl
+
+# Memtrack HAL
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl
+
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
+# Bluetooth HAL
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
+    libbt-vendor
+
+# Camera HAL
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl-legacy \
+    android.hardware.camera.device@1.0-impl-legacy
+
+# Usb HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# WIFI HAL
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
+    wificond
+
+# Vibrator HAL
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
+
+# DRM HAL
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
 
 # Media
 PRODUCT_COPY_FILES += \
