@@ -166,6 +166,9 @@ PRODUCT_COPY_FILES += \
 # System properties
 $(call inherit-product, $(COMMON_PATH)/system_prop.mk)
 
+# Build GO
+$(call inherit-product, build/make/target/product/go_defaults_512.mk)
+
 # Include debugging props
 $(call inherit-product, $(LOCAL_PATH)/system_prop_debug.mk)
 
