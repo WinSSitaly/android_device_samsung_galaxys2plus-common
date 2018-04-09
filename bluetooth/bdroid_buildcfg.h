@@ -17,8 +17,12 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
+<<<<<<< HEAD
 #define BTM_DEF_LOCAL_NAME   "Samsung Galaxy S2 Plus"
 
 /* Defined if the kernel does not have support for CLOCK_BOOTTIME_ALARM */
 #define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
+=======
+#define BTM_DEF_LOCAL_NAME   "Samsung Galaxy Grand Duos"
+>>>>>>> eaf3b01... I9082: Fix Bluetooth
 #endif
