@@ -18,6 +18,8 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := healthd_board_capri.cpp
+LOCAL_C_INCLUDES := system/core/healthd/include \
+    system/core/base/include
 
 LOCAL_MODULE := libhealthd.capri
 
