@@ -65,11 +65,16 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
 BOARD_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS -DCAPRI_HWC -DREFBASE_JB_MR1_COMPAT_SYMBOLS
 
+<<<<<<< HEAD:BoardConfigCommon.mk
 # new google video codecs for low end devices
 DEVICE_ENABLE_LOV := true
 
 # CMHW
 BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/galaxys2plus-common/cmhw/
+=======
+# LINEAGEHW
+BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw/ device/samsung/i9082/lineagehw/
+>>>>>>> 869569a... I9082: Lineagehw: Rebrand:BoardConfig.mk
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/samsung/galaxys2plus-common/ril/
