@@ -166,5 +166,8 @@ PRODUCT_COPY_FILES += \
 # System properties
 $(call inherit-product, $(COMMON_PATH)/system_prop.mk)
 
+# Include debugging props
+$(call inherit-product, $(LOCAL_PATH)/system_prop_debug.mk)
+
 # Dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
