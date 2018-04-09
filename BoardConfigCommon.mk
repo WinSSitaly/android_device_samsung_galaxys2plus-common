@@ -135,4 +135,10 @@ WITHOUT_CHECK_API := true
 ANDROID_NO_TEST_CHECK := true
 
 # SELinux
+<<<<<<< HEAD:BoardConfigCommon.mk
 BOARD_SEPOLICY_DIRS += device/samsung/galaxys2plus-common/sepolicy
+=======
+BOARD_SEPOLICY_DIRS += device/samsung/i9082/sepolicy
+
+TARGET_USES_LEGACY_ADB_INTERFACE := true
+>>>>>>> de7a491... I9082: Enable legacy_adb interface:BoardConfig.mk
