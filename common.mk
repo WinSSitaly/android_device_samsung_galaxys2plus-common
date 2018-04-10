@@ -177,4 +177,4 @@ $(call inherit-product, build/make/target/product/go_defaults_512.mk)
 $(call inherit-product, $(LOCAL_PATH)/system_prop_debug.mk)
 
 # Dalvik heap config
-$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
