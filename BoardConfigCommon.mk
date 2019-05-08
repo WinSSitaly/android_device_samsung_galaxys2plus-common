@@ -6,6 +6,9 @@ USE_CAMERA_STUB := true
 # Platform
 TARGET_BOARD_PLATFORM := capri
 
+# Drop ninja
+USE_NINJA := false
+
 # CPU
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
@@ -18,8 +21,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := capri
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_galaxys2plus_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/galaxys2plus-common
+#TARGET_KERNEL_CONFIG := lineageos_galaxys2plus_defconfig
+#TARGET_KERNEL_SOURCE := kernel/samsung/galaxys2plus-common
+TARGET_PREBUILT_KERNEL := device/samsung/galaxys2plus-common/kernel
 BOARD_KERNEL_CMDLINE := console=ttyS0,115200n8 mem=832M@0xA2000000 androidboot.console=ttyS0 vc-cma-mem=0/176M@0xCB000000
 BOARD_KERNEL_BASE := 0xa2000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -49,7 +53,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_RECOVERY_FSTAB := device/samsung/galaxys2plus-common/rootdir/fstab.capri
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
-TARGET_RECOVERY_DENSITY := hdpi
+TARGET_RECOVERY_DENSITY := mdpi
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/galaxys2plus-common/mkbootimg.mk
 TARGET_NOT_USE_GZIP_RECOVERY_RAMDISK := true
 
@@ -59,6 +63,9 @@ BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
 BOARD_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS -DCAPRI_HWC -DREFBASE_JB_MR1_COMPAT_SYMBOLS
+
+# new google video codecs for low end devices
+DEVICE_ENABLE_LOV := true
 
 # CMHW
 BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/galaxys2plus-common/cmhw/
@@ -114,6 +121,12 @@ MALLOC_SVELTE := true
 
 # Some of our vendor libs have text relocations
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+
+# Skip API checks.
+WITHOUT_CHECK_API := true
+
+# Don't try to build and run all tests by default.
+ANDROID_NO_TEST_CHECK := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/samsung/galaxys2plus-common/sepolicy
