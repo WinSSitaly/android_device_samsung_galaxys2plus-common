@@ -45,3 +45,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0 \
     ro.secure=0
+	
+# KSM
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ksm.default=1
+
+# Art
+PRODUCT_PROPERTY_OVERRIDES += \
+dalvik.vm.dex2oat-swap=false \
+dalvik.vm.dex2oat-Xmx=256m
+
+# RAM optimizations
+ro.sys.fw.trim_enable_memory=536870912 \
+ro.sys.fw.use_trim_settings=true \
+ro.sys.fw.empty_app_percent=25 \
+ro.sys.fw.trim_empty_percent=50 \
+ro.sys.fw.trim_cache_percent=50 \
+ro.sys.fw.bg_apps_limit=16 \
+ro.sys.fw.bservice_limit=3 \
+ro.sys.fw.bservice_age=3000 \
+ro.sys.fw.bservice_enable=true	
