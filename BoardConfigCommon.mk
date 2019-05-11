@@ -6,9 +6,6 @@ USE_CAMERA_STUB := true
 # Platform
 TARGET_BOARD_PLATFORM := capri
 
-# Drop ninja
-USE_NINJA := false
-
 # CPU
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
@@ -72,7 +69,6 @@ TARGET_NOT_USE_GZIP_RECOVERY_RAMDISK := true
 
 # Hardware rendering
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
-#BOARD_USE_MHEAP_SCREENSHOT := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
 BOARD_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS -DCAPRI_HWC -DREFBASE_JB_MR1_COMPAT_SYMBOLS
@@ -143,4 +139,12 @@ ANDROID_NO_TEST_CHECK := true
 
 # SELinux
 #BOARD_SEPOLICY_DIRS += device/samsung/galaxys2plus-common/sepolicy
+
+TARGET_USES_LEGACY_ADB_INTERFACE := true
+
+# Shims
+TARGET_LD_SHIM_LIBS := \
+     /system/lib/hw/audio.primary.capri.so|libsamsung_symbols.so \
+     /system/vendor/lib/hw/camera.capri.so|libsamsung_symbols.so \
+     /system/lib/libtvservice_binder.so|libsamsung_symbols.so
 
