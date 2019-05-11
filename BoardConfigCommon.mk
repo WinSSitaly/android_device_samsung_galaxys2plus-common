@@ -18,9 +18,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := capri
 
 # Kernel
-#TARGET_KERNEL_CONFIG := lineageos_galaxys2plus_defconfig
-#TARGET_KERNEL_SOURCE := kernel/samsung/galaxys2plus-common
-TARGET_PREBUILT_KERNEL := device/samsung/galaxys2plus-common/kernel
+TARGET_KERNEL_CONFIG := lineageos_galaxys2plus_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/galaxys2plus-common
+# TARGET_PREBUILT_KERNEL := device/samsung/galaxys2plus-common/kernel
 BOARD_KERNEL_CMDLINE := console=ttyS0,115200n8 mem=832M@0xA2000000 androidboot.console=ttyS0 vc-cma-mem=0/176M@0xCB000000
 BOARD_KERNEL_BASE := 0xa2000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -77,7 +77,7 @@ BOARD_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS -DCAPRI_HWC -DREFBASE_JB_MR1_C
 DEVICE_ENABLE_LOV := true
 
 # LINEAGEHW
-BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw/ device/samsung/i9082/lineagehw/
+BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw/ device/samsung/galaxys2plus-common/lineagehw/
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/samsung/galaxys2plus-common/ril/
