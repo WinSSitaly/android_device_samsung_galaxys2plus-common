@@ -20,29 +20,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/init.recovery.capri.rc:root/init.recovery.capri.rc \
     $(COMMON_PATH)/rootdir/ueventd.capri.rc:root/ueventd.capri.rc \
     $(COMMON_PATH)/rootdir/rild.rc:system/etc/init/rild.rc
-=======
-    $(LOCAL_PATH)/rootdir/fstab.capri:root/fstab.capri \
-    $(LOCAL_PATH)/rootdir/init.capri.rc:root/init.capri.rc \
-    $(LOCAL_PATH)/rootdir/init.bcm281x5.usb.rc:root/init.bcm281x5.usb.rc \
-    $(LOCAL_PATH)/rootdir/init.log.rc:root/init.log.rc \
-    $(LOCAL_PATH)/rootdir/init.recovery.capri.rc:root/init.recovery.capri.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.capri.rc:root/ueventd.capri.rc \
-    $(LOCAL_PATH)/rootdir/rild.rc:system/etc/init/rild.rc
-
-# Prebuilt kl keymaps
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayouts/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
-    $(LOCAL_PATH)/keylayouts/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
-    $(LOCAL_PATH)/keylayouts/cyttsp4_btn.kl:system/usr/keylayout/cyttsp4_btn.kl \
-    $(LOCAL_PATH)/keylayouts/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/keylayouts/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
-    $(LOCAL_PATH)/keylayouts/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl
-
-# Packages
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    #SamsungDoze \
-    SamsungServiceMode
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
