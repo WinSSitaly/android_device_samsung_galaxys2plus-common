@@ -31,7 +31,7 @@ on init
     chmod 1775 /tmp
 
     # Support legacy paths
-    symlink /sdcard /storage/sdcard0
+    symlink /sdcard /storage/sdcard
 
     symlink /dev/block/mmcblk0p11 /dev/block/param
 
@@ -52,6 +52,9 @@ on post-fs-data
     chmod 0664 /efs/wifi/.mac.info
     chown system system /efs/imei/.nvmac.info
     chmod 0664 /efs/imei/.nvmac.info
+    chown dhcp dhcp /data/misc/dhcp
+    chown wifi root /dev/rfkill
+    chown wifi wifi /sys/module/dhd/parameters/firmware_path
 
     # for TRP/TIS
     write /data/.psm.info 1
@@ -509,7 +512,7 @@ service gpsd /system/bin/glgps -c /system/etc/gps/glconfig.xml
 service tvserver /system/bin/tvserver
     class main
     user system
-    group system root audio graphics
+    group system wakelock root audio graphics
 #
 # to disable the tv-server from running, add the line below. in
 # order to achieve lowest power usage associated with the hdmi

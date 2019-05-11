@@ -26,7 +26,10 @@
 /dev/vc-hnfo              0666   system     system
 
 # sensors
-/dev/mpu6k                0660   root       system
+/dev/mpu6k                0777   root       system
+
+# wlan
+/dev/rfkill               0777   root       wifi
 
 # for flight mode optimization
 /dev/flightmode-opt       0666   system     system
@@ -38,7 +41,7 @@
 /dev/block/mmcblk0p1      0770   radio      system
 
 # for USB OTG Printer
-/dev/usb/lp*              0660   system     usb
+/dev/usb/lp*              0777   system     usb
 
 # SYSTEM Status
-/dev/block/mmcblk0p11     0660   system     root
+/dev/block/mmcblk0p11     0777   system     root

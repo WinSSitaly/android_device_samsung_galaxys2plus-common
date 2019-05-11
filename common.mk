@@ -24,6 +24,7 @@ PRODUCT_COPY_FILES += \
 # Wi-Fi
 PRODUCT_PACKAGES += \
     hostapd \
+    wificond \
     wpa_supplicant \
     wpa_supplicant.conf
 
