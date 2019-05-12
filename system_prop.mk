@@ -29,6 +29,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.brcm.gralloc.force_hdcp=1 \
     config.disable_atlas=true \
     persist.media.treble_omx=false \
+    ro.audio.flinger_standbytime_ms=300 \
     wifi.interface=wlan0 
 
 # Dalvik heap

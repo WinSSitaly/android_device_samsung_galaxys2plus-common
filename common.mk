@@ -23,8 +23,10 @@ PRODUCT_COPY_FILES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
+    macloader \
     hostapd \
     wificond \
+    libnetcmdiface \
     wpa_supplicant \
     wpa_supplicant.conf
 
@@ -35,8 +37,8 @@ PRODUCT_PACKAGES += \
     libstlport
 
 # GPS
-PRODUCT_PACKAGES += \
-    libglgps-compat
+#PRODUCT_PACKAGES += \
+#    libglgps-compat
 
 # Shims
 PRODUCT_PACKAGES += \
@@ -143,7 +145,7 @@ PRODUCT_COPY_FILES += \
 # Packages
 PRODUCT_PACKAGES += \
     charger_res_images \
-    SamsungDoze \
+#    SamsungDoze \
     SamsungServiceMode \
     Snap
 
