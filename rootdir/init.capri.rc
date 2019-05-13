@@ -472,15 +472,6 @@ service charger /charger
     critical
     seclabel u:r:charger:s0
     
-# RILD
-    service ril-daemon /vendor/bin/hw/rild
-        class main
-        socket rild stream 660 root radio
-        socket rild1 stream 660 root radio
-        socket rild-debug stream 660 radio system
-        user root
-group radio cache inet misc audio system sdcard_rw log sdcard_r    
-
 # begin of wifi
     service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
