@@ -32,10 +32,6 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
-# Stlport
-PRODUCT_PACKAGES += \
-    libstlport
-
 # GPS
 #PRODUCT_PACKAGES += \
 #    libglgps-compat
@@ -145,8 +141,6 @@ PRODUCT_COPY_FILES += \
 # Packages
 PRODUCT_PACKAGES += \
     charger_res_images \
-#    SamsungDoze \
-    SamsungServiceMode \
     Snap
 
 # Permissions

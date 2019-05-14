@@ -5,11 +5,11 @@ USE_CAMERA_STUB := true
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy
+    device/samsung/galaxys2plus-common/seccomp_policy/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy
 
 # Platform
 TARGET_BOARD_PLATFORM := capri
-
+BOARD_VENDOR := samsung
 # CPU
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
@@ -66,6 +66,8 @@ BOARD_CUSTOM_BOOTIMG_MK := device/samsung/galaxys2plus-common/mkbootimg.mk
 TARGET_NOT_USE_GZIP_RECOVERY_RAMDISK := true
 
 # Hardware rendering
+USE_OPENGL_RENDERER := true
+BOARD_FORCE_SCREENSHOT_CPU_PATH := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
@@ -78,6 +80,8 @@ DEVICE_ENABLE_LOV := true
 BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw/ device/samsung/galaxys2plus-common/lineagehw/
 
 # RIL
+BOARD_PROVIDES_LIBRIL := true
+BOARD_MODEM_TYPE := xmm6260
 BOARD_RIL_CLASS := ../../../device/samsung/galaxys2plus-common/ril/
 BOARD_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
@@ -103,8 +107,6 @@ BOARD_WPA_SUPPLICANT_DRIVER         := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB    := lib_driver_cmd_bcmdhd
 BOARD_HOSTAPD_DRIVER                := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB           := lib_driver_cmd_bcmdhd
-WIFI_DRIVER_MODULE_NAME             := "dhd"
-WIFI_DRIVER_MODULE_PATH             := "/system/lib/modules/dhd.ko"
 WIFI_DRIVER_FW_PATH_PARAM           := "/sys/module/dhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_AP              := "/system/etc/wifi/bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_STA             := "/system/etc/wifi/bcmdhd_sta.bin"

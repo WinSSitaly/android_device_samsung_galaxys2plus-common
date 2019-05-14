@@ -35,11 +35,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dalvik heap
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=56m
-
-# Disable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.adb.secure=0 \
-    ro.secure=0
 	
 # KSM
 PRODUCT_PROPERTY_OVERRIDES += \
