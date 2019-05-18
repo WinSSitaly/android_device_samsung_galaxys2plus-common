@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
     wificond \
     libnetcmdiface \
     wpa_supplicant \
+    libsecril-client \
     wpa_supplicant.conf
 
 $(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)

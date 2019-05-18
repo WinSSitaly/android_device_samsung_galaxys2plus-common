@@ -357,7 +357,7 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
         }
         return rr;
     }
-
+    
     @Override
     protected void
     processUnsolicited (Parcel p, int type) {
