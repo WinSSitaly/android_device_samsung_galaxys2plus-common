@@ -82,7 +82,7 @@ BOARD_HARDWARE_CLASS := hardware/samsung/lineagehw/ device/samsung/galaxys2plus-
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MODEM_TYPE := xmm6260
-BOARD_RIL_CLASS := ../../../device/samsung/galaxys2plus-common/ril/
+#BOARD_RIL_CLASS := ../../../device/samsung/galaxys2plus-common/ril/
 BOARD_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
 # GPS
