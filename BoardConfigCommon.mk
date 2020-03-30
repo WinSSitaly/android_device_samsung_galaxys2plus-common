@@ -112,6 +112,12 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 # Disable tcache
 MALLOC_SVELTE := true
 
+# Skip API checks.
+WITHOUT_CHECK_API := true
+
+# Don't try to build and run all tests by default.
+ANDROID_NO_TEST_CHECK := true
+
 # Some of our vendor libs have text relocations
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
