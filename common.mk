@@ -74,6 +74,8 @@ PRODUCT_PACKAGES += \
     SamsungDoze \
     SamsungServiceMode \
     Snap
+	
+PRODUCT_TAGS += dalvik.gc.type-precise	
 
 # Permissions
 PRODUCT_COPY_FILES += \
