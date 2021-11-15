@@ -1,13 +1,13 @@
 [
   {
     "remote": "github",
-    "repository": "surblazer/android_kernel_samsung_galaxys2plus-common",
+    "repository": "WinSSitaly/android_kernel_samsung_galaxys2plus-common",
     "target_path": "kernel/samsung/galaxys2plus-common",
     "revision": "android-8.1"
   },
   {
     "remote": "github",
-    "repository": "surblazer/proprietary_vendor_samsung_galaxys2plus-common",
+    "repository": "WinSSitaly/proprietary_vendor_samsung_galaxys2plus-common",
     "target_path": "vendor/samsung/galaxys2plus-common",
     "revision": "android-8.1"
   },
